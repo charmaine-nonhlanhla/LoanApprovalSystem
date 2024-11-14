@@ -2,7 +2,7 @@ namespace Domain
 {
     public class Applicants
     {
-        public int CustomerID {get; set;}
+        public int Id {get; set;}
 
         public string IDNumber {get; set;}
 

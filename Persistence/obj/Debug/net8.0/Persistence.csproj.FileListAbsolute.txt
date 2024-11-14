@@ -1,0 +1,16 @@
+C:\Clients\LoanApprovalSystem\Persistence\bin\Debug\net8.0\Persistence.deps.json
+C:\Clients\LoanApprovalSystem\Persistence\bin\Debug\net8.0\Persistence.dll
+C:\Clients\LoanApprovalSystem\Persistence\bin\Debug\net8.0\Persistence.pdb
+C:\Clients\LoanApprovalSystem\Persistence\bin\Debug\net8.0\Domain.dll
+C:\Clients\LoanApprovalSystem\Persistence\bin\Debug\net8.0\Domain.pdb
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.csproj.AssemblyReference.cache
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfoInputs.cache
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.AssemblyInfo.cs
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.sourcelink.json
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persiste.61C28332.Up2Date
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.dll
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\refint\Persistence.dll
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\Persistence.pdb
+C:\Clients\LoanApprovalSystem\Persistence\obj\Debug\net8.0\ref\Persistence.dll

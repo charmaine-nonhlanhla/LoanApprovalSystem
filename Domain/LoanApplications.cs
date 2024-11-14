@@ -2,7 +2,7 @@ namespace Domain
 {
     public class LoanApplications
     {
-        public int ApplicationID {get; set;}
+        public int Id {get; set;}
 
         public int CustomerID {get; set;}
 
