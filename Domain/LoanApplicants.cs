@@ -1,6 +1,6 @@
 namespace Domain
 {
-    public class Applicants
+    public class LoanApplicants
     {
         public int Id {get; set;}
 

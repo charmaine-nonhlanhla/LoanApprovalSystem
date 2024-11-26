@@ -1,6 +1,6 @@
-namespace Domain
+namespace Application.DTOs
 {
-    public class LoanApplications
+    public class LoanApplicationDTO
     {
         public int Id {get; set;}
 

@@ -10,17 +10,17 @@ namespace Persistence
             
         }
 
-        public DbSet<Applicants> Applicants {get; set;}
-        public DbSet<LoanApplications> LoanApplicationss {get; set;}
+        public DbSet<LoanApplicants> LoanApplicants {get; set;}
+        public DbSet<LoanApplications> LoanApplications {get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            modelBuilder.Entity<LoanApplications>()
-            .Property(l => l.CurrentExpenses)
+            .Property(l => l.MonthlyDebt)
             .HasColumnType("decimal(18,2)"); 
 
         modelBuilder.Entity<LoanApplications>()
-            .Property(l => l.CurrentIncome)
+            .Property(l => l.MonthlyDebt)
             .HasColumnType("decimal(18,2)");
 
         modelBuilder.Entity<LoanApplications>()
