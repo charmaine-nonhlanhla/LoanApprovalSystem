@@ -1,3 +1,5 @@
+using Application.DTOs;
+using AutoMapper;
 using Domain;
 using MediatR;
 using Persistence;
@@ -8,19 +10,22 @@ namespace Application.Applicants
     {
         public class Command : IRequest
         {
-            public LoanApplicants LoanApplicant { get; set; }
+            public LoanApplicantDTO LoanApplicant { get; set; }
         }
-        public class Handler : IRequest<Command>
+        public class Handler : IRequestHandler<Command>
         {
             private readonly DataContext _context;
-            public Handler(DataContext context)
+            private readonly IMapper _mapper;
+            public Handler(DataContext context, IMapper mapper)
             {
+                _mapper = mapper;
                 _context = context;
             }
 
             public async Task Handle(Command request, CancellationToken cancellationToken)
             {
-                _context.LoanApplicants.Add(request.LoanApplicant);
+                var loanApplicant = _mapper.Map<LoanApplicants>(request.LoanApplicant);
+                _context.LoanApplicants.Add(loanApplicant);
 
                 await _context.SaveChangesAsync();
             }

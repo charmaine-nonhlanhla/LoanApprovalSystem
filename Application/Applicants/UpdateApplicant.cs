@@ -1,3 +1,4 @@
+using Application.DTOs;
 using AutoMapper;
 using Domain;
 using MediatR;
@@ -9,7 +10,7 @@ namespace Application.Applicants
     {
         public class Command : IRequest
         {
-            public LoanApplicants LoanApplicant { get; set; }
+            public LoanApplicantDTO LoanApplicant { get; set; }
         }
 
         public class Handler : IRequestHandler<Command>

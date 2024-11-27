@@ -7,29 +7,30 @@ namespace Persistence
     {
         public DataContext(DbContextOptions options) : base(options)
         {
-            
+
         }
 
-        public DbSet<LoanApplicants> LoanApplicants {get; set;}
-        public DbSet<LoanApplications> LoanApplications {get; set;}
+        public DbSet<LoanApplicants> LoanApplicants { get; set; }
+        public DbSet<LoanApplications> LoanApplications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           modelBuilder.Entity<LoanApplications>()
-            .Property(l => l.MonthlyDebt)
-            .HasColumnType("decimal(18,2)"); 
+            modelBuilder.Entity<LoanApplications>(entity =>
+            {
+                entity.Property(l => l.MonthlyDebt)
+                      .HasPrecision(18, 2);
 
-        modelBuilder.Entity<LoanApplications>()
-            .Property(l => l.MonthlyDebt)
-            .HasColumnType("decimal(18,2)");
+                entity.Property(l => l.InterestRate)
+                      .HasPrecision(18, 2);
 
-        modelBuilder.Entity<LoanApplications>()
-            .Property(l => l.InterestRate)
-            .HasColumnType("decimal(18,2)");
+                entity.Property(l => l.LoanAmountRequested)
+                      .HasPrecision(18, 2);
 
-        modelBuilder.Entity<LoanApplications>()
-            .Property(l => l.LoanAmountRequested)
-            .HasColumnType("decimal(18,2)");
+                entity.Property(l => l.GrossIncome)
+                      .HasPrecision(18, 2);
+            });
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

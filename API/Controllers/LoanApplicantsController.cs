@@ -1,4 +1,5 @@
 using Application.Applicants;
+using Application.DTOs;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +20,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateApplicant(LoanApplicants applicant)
+        public async Task<IActionResult> CreateApplicant(LoanApplicantDTO applicant)
         {
             await Mediator.Send(new CreateApplicant.Command {LoanApplicant = applicant});
 
@@ -27,7 +28,7 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateApplicantDetails(int id, LoanApplicants applicant)
+        public async Task<IActionResult> UpdateApplicantDetails(int id, LoanApplicantDTO applicant)
         {
             applicant.Id = id;
 

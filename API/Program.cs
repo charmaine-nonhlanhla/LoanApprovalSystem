@@ -1,3 +1,5 @@
+using Application.Applicants;
+using Application.Mapper;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -13,6 +15,10 @@ builder.Services.AddDbContext<DataContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetApplicant.Handler).Assembly));
+
+builder.Services.AddAutoMapper(typeof(Map).Assembly);
 
 var app = builder.Build();
 

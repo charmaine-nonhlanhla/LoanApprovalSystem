@@ -12,7 +12,7 @@ namespace Application.Services
 
         public async Task debtToIncomeRatio()
         {
-            var dti = await _context.Applicants.FindAsync();
+            var dti = await _context.LoanApplicants.FindAsync();
         }
     }
 }
