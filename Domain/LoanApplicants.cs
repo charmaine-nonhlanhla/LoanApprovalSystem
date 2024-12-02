@@ -18,6 +18,6 @@ namespace Domain
 
         public string Address {get; set;}
 
-        public DateTime RegistrationDate {get; set;}
+        public DateTime RegistrationDate {get; set;} = DateTime.Now;
     }
 }
