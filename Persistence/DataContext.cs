@@ -30,6 +30,11 @@ namespace Persistence
                       .HasPrecision(18, 2);
             });
 
+                modelBuilder.Entity<LoanApplications>()
+                      .HasOne(la => la.LoanApplicant)
+                      .WithMany(lapp => lapp.LoanApplications)
+                      .HasForeignKey(la => la.LoanApplicantId);
+
             base.OnModelCreating(modelBuilder);
         }
     }

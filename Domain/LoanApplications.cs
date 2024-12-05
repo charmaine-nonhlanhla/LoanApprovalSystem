@@ -25,5 +25,8 @@ namespace Domain
         public string Status {get; set;}
 
         public string Remarks {get; set;} 
+
+        public int LoanApplicantId {get; set;}
+        public LoanApplicants LoanApplicant {get; set;}
     }
 }
