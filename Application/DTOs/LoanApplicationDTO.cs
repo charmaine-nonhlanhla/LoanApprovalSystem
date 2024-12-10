@@ -4,7 +4,7 @@ namespace Application.DTOs
     {
         public int Id { get; set; }
 
-        public int CustomerID { get; set; }
+        public int ApplicantId { get; set; }
 
         public int CreditScore { get; set; }
 
